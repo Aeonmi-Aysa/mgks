@@ -1,0 +1,16 @@
+⊗ mgks::genesis "strategic_insight"
+∴ Schema for synthesis and launch-path decisions
+
+◈ template strategic_insight {
+    required:  thesis         ⟨str⟩
+    required:  confidence     ⟨f32: 0.0..1.0⟩
+    required:  domain         ⟨Strategic | Temporal | Market⟩
+
+    optional:  constraints    ⟨str⟩
+    optional:  owner          ⟨str⟩
+
+    default_tier:    t3
+    default_decay:   90d
+    default_domain:  Strategic
+    agents:          [conductor, closer, mother_ai]
+}

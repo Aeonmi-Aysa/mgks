@@ -1,0 +1,15 @@
+⊗ mgks::index "global"
+∴ Cross-tier global lookup index. Resolver order: file -> tier -> global
+
+schema  1.0
+updated 2026-04-12T10:30:00Z
+
+⧉ entries {
+    t2::aeonmi_launch_session_011::quantum_language_demand_rising -> ../t2/2026-04-12_session-011.t2.mgk
+    t2::aeonmi_launch_session_011::developer_tiktok_quantum_viral -> ../t2/2026-04-12_session-011.t2.mgk
+    t2::aeonmi_launch_session_011::premature_launch_damages_trust -> ../t2/2026-04-12_session-011.t2.mgk
+
+    t3::consensus_graph::launch_api_waitlist_at_hackathon -> ../t3/consensus.t3.mgk
+    t3::consensus_graph::proceed_with_api_launch_staged   -> ../t3/consensus.t3.mgk
+    t3::consensus_graph::api_launch_consensus_canonical   -> ../t3/consensus.t3.mgk
+}

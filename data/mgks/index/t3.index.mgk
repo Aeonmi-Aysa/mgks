@@ -1,0 +1,11 @@
+⊗ mgks::index "t3"
+∴ Tier index for consensus lookup
+
+schema  1.0
+updated 2026-04-12T10:30:00Z
+
+⧉ entries {
+    consensus_graph::launch_api_waitlist_at_hackathon -> ../t3/consensus.t3.mgk
+    consensus_graph::proceed_with_api_launch_staged   -> ../t3/consensus.t3.mgk
+    consensus_graph::api_launch_consensus_canonical   -> ../t3/consensus.t3.mgk
+}

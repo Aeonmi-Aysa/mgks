@@ -1,0 +1,60 @@
+⊗ mgks::t3 "consensus_graph"
+∴ Mother AI semantic memory — consensus-verified truths only
+∴ Glyphs enter T3 after collapse + multi-agent evidence
+
+schema  1.0
+mode    strict
+decay   90d
+created 2026-04-12T10:14:00Z
+
+⧉ glyphs {
+
+    ◈ launch_api_waitlist_at_hackathon {
+        id:      018f1234-5678-7abc-def0-000000000003
+        agent:   closer
+        conf:    0.690
+        domain:  Strategic
+        genesis: strategic_insight
+
+        M|ψ⟩ → |proceed_with_staged_launch⟩
+        collapsed_by:  mother_ai
+        collapsed_at:  2026-04-12T10:14:00Z
+        evidence:      4
+
+        promoted_from_tier:  t2
+        promoted_from_store: aeonmi_launch_session_011
+        promoted_at:         2026-04-12T10:14:00Z
+
+        ↦ proceed_with_api_launch_staged  CAUSES  weight=0.88
+    }
+
+    ◈ proceed_with_api_launch_staged {
+        id:      018f1234-5678-7abc-def0-000000000005
+        agent:   conductor
+        conf:    0.720
+        domain:  Strategic
+
+        M|ψ⟩ → |staged_launch_is_correct_path⟩
+        collapsed_by:  mother_ai
+        collapsed_at:  2026-04-12T10:14:00Z
+        evidence:      5
+
+        promoted_from_tier:  t2
+        promoted_from_store: aeonmi_launch_session_011
+        promoted_at:         2026-04-12T10:14:00Z
+    }
+
+    ◈ api_launch_consensus_canonical {
+        id:      018f1234-9999-7abc-def0-0000000000AA
+        aliases: [018f1234-5678-7abc-def0-000000000003, 018f1234-5678-7abc-def0-000000000005]
+        agent:   mother_ai
+        conf:    0.910
+        domain:  Strategic
+
+        M|ψ⟩ → |launch_staged_rollout_with_waitlist⟩
+        collapsed_by:  mother_ai
+        collapsed_at:  2026-04-12T10:20:00Z
+        evidence:      5
+    }
+
+}
