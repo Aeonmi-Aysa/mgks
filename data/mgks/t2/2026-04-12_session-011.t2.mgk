@@ -1,0 +1,69 @@
+⊗ mgks::t2 "aeonmi_launch_session_011"
+∴ Episodic memory: Oracle + Hype + Closer + Devil + Conductor signals
+∴ Sourced from session 11, April 12 2026
+
+schema  1.0
+mode    strict
+decay   7d
+created 2026-04-12T10:14:00Z
+session 018f1234-0000-7000-0000-000000000011
+
+⧉ glyphs {
+
+    ◈ quantum_language_demand_rising {
+        id:      018f1234-5678-7abc-def0-000000000001
+        agent:   oracle
+        conf:    0.761
+        domain:  Market
+        genesis: market_signal
+        created: 2026-04-12T09:38:39Z
+
+        |ψ⟩ {
+            |demand_accelerating⟩  α = 0.87
+            |demand_plateauing⟩    α = 0.13
+        }
+
+        |Bell⟩ ↔ t2::aeonmi_launch_session_011::developer_tiktok_quantum_viral
+        correlation: 0.75
+        entangled_by: oracle
+
+        ↦ developer_tiktok_quantum_viral     CAUSES      weight=0.75
+        ↦ launch_api_waitlist_at_hackathon   SUPPORTS    weight=0.81
+    }
+
+    ◈ developer_tiktok_quantum_viral {
+        id:      018f1234-5678-7abc-def0-000000000002
+        agent:   hype_machine
+        conf:    0.730
+        domain:  Behavioral
+        created: 2026-04-12T09:40:01Z
+
+        |ψ⟩ {
+            |viral_momentum_building⟩   α = 0.72
+            |viral_momentum_fading⟩     α = 0.28
+        }
+
+        |Bell⟩ ↔ t2::aeonmi_launch_session_011::quantum_language_demand_rising
+        correlation: 0.75
+        entangled_by: hype_machine
+
+        ↦ launch_api_waitlist_at_hackathon  SUPPORTS  weight=0.72
+    }
+
+    ◈ premature_launch_damages_trust {
+        id:      018f1234-5678-7abc-def0-000000000004
+        agent:   devils_advocate
+        conf:    0.773
+        domain:  Strategic
+        genesis: risk_assessment
+        created: 2026-04-12T09:43:22Z
+
+        |ψ⟩ {
+            |trust_damage_likely⟩    α = 0.78
+            |trust_damage_unlikely⟩  α = 0.22
+        }
+
+        ↦ launch_api_waitlist_at_hackathon  CONTRADICTS  weight=0.78
+    }
+
+}

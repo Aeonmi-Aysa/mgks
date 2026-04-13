@@ -1,0 +1,18 @@
+⊗ mgks::genesis "market_signal"
+∴ Schema for Oracle agent market observations
+
+◈ template market_signal {
+    required:  signal_label  ⟨str⟩
+    required:  direction     ⟨bullish | bearish | neutral⟩
+    required:  strength      ⟨f32: 0.0..1.0⟩
+    required:  confidence    ⟨f32: 0.0..1.0⟩
+    required:  domain        ⟨Market | Technical | Behavioral | Strategic | Temporal⟩
+
+    optional:  source_url    ⟨str⟩
+    optional:  expiry        ⟨duration⟩
+
+    default_tier:    t2
+    default_decay:   7d
+    default_domain:  Market
+    agents:          [oracle, conductor]
+}

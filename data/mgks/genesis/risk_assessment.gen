@@ -1,0 +1,16 @@
+⊗ mgks::genesis "risk_assessment"
+∴ Schema for Devil's Advocate counterfactual/risk entries
+
+◈ template risk_assessment {
+    required:  risk_label      ⟨str⟩
+    required:  severity        ⟨f32: 0.0..1.0⟩
+    required:  confidence      ⟨f32: 0.0..1.0⟩
+    required:  domain          ⟨Strategic | Behavioral | Technical⟩
+
+    optional:  mitigation      ⟨str⟩
+
+    default_tier:    t2
+    default_decay:   7d
+    default_domain:  Strategic
+    agents:          [devils_advocate, conductor]
+}
