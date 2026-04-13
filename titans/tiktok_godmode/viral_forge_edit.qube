@@ -1,0 +1,27 @@
+#QUBE 1.0
+module ViralForgeEditQube {
+  register q_cut[8];
+  register q_overlay[8];
+  register q_audio[4];
+
+  gate H q_cut[*];
+  gate H q_overlay[*];
+  gate H q_audio[*];
+
+  // retention-preserving constraints
+  operator HookLock(2s,3s);
+  operator PayoffPace(min=0.70,max=0.88);
+  operator ComplianceMask(blocklist="banned_keywords_2026.lex");
+
+  entangle q_cut[0], q_overlay[0];
+  entangle q_cut[1], q_audio[1];
+
+  objective maximize = 0.34*completion_rate + 0.22*rewatch_rate + 0.18*saves + 0.16*shares + 0.10*search_hits;
+  anneal steps=2048 temp=0.008;
+
+  measure q_cut -> cut_state;
+  measure q_overlay -> overlay_state;
+  measure q_audio -> audio_state;
+
+  emit "best_cut_overlay_audio_state";
+}

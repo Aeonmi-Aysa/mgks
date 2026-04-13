@@ -1,0 +1,28 @@
+// scoring.ai :: Revenue/Commerce Singularity scoring core
+lib scoring_core {
+  fn n(v, d) {
+    if (is_null(v)) { return d; }
+    return float(v);
+  }
+
+  // Revenue Priority Score (RPS)
+  fn rps(speed, trust, scalability, compliance_risk) {
+    return (0.55 * n(speed, 0.0))
+      + (0.25 * n(trust, 0.0))
+      + (0.20 * n(scalability, 0.0))
+      - (0.30 * n(compliance_risk, 0.0));
+  }
+
+  // Conversion Readiness Score (CRS)
+  fn crs(proof_visual, return_risk, seller_quality, commission_potential) {
+    return (0.35 * n(proof_visual, 0.0))
+      + (0.25 * n(return_risk, 0.0))
+      + (0.20 * n(seller_quality, 0.0))
+      + (0.20 * n(commission_potential, 0.0));
+  }
+
+  fn lane_selector(rps_service, rps_affiliate) {
+    if (rps_service >= rps_affiliate) { return "LaneA_UGC_Service"; }
+    return "LaneB_Shop_Affiliate";
+  }
+}

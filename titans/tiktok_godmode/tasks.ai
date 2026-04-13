@@ -1,0 +1,30 @@
+// tasks.ai :: Titan Advanced Library
+lib tasks_vault {
+  fn esc(s) {
+    let t = replace(s, "\\", "\\\\");
+    return replace(t, "\"", "\\\"");
+  }
+
+  fn line_json(k, v) {
+    return "\"" + esc(k) + "\":\"" + esc(v) + "\"";
+  }
+
+  fn emit_task(name, lane, payload) {
+    return "{"
+      + line_json("task", name) + ","
+      + line_json("lane", lane) + ","
+      + line_json("payload", payload) + ","
+      + line_json("status", "ready")
+      + "}";
+  }
+
+  fn write_lines(path, arr) {
+    let i = 0;
+    let out = "";
+    while (i < len(arr)) {
+      out = out + arr[i] + "\n";
+      i = i + 1;
+    }
+    write_file(path, out);
+  }
+}

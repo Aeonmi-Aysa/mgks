@@ -1,0 +1,36 @@
+// revenue_singularity_titan.ai :: Dual-track cashflow core
+import { tasks_vault } from "./tasks.ai";
+import { scoring_core } from "./scoring.ai";
+
+program RevenueSingularityTitan {
+  fn build_signal_core() {
+    return "signal_core: niche_demand + creator_fit + product_proof";
+  }
+
+  fn build_offer_core() {
+    return "offer_core: UGC conversion pack + 24h turnaround + retainer ladder";
+  }
+
+  fn build_cashflow_core() {
+    return "cashflow_core: laneA(service upfront) + laneB(affiliate commission)";
+  }
+
+  fn build_execution_core() {
+    return "execution_core: 7-day sprint + scorecards + automations";
+  }
+
+  fn run() {
+    let rps_service = scoring_core.rps(9.2, 7.8, 6.3, 1.4);
+    let rps_aff = scoring_core.rps(5.4, 8.0, 8.8, 2.2);
+    let lane = scoring_core.lane_selector(rps_service, rps_aff);
+
+    let tasks = [];
+    push(tasks, tasks_vault.emit_task("signal_scan", lane, build_signal_core()));
+    push(tasks, tasks_vault.emit_task("offer_build", lane, build_offer_core()));
+    push(tasks, tasks_vault.emit_task("cashflow_sync", lane, build_cashflow_core()));
+    push(tasks, tasks_vault.emit_task("execution_grid", lane, build_execution_core()));
+    tasks_vault.write_lines("revenue_singularity.tasks.jsonl", tasks);
+  }
+}
+
+RevenueSingularityTitan.run();

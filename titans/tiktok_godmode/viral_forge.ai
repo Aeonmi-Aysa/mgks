@@ -1,0 +1,56 @@
+// Application 1 :: ViralForge Titan (foundational)
+import { tasks_vault } from "./tasks.ai";
+import { scoring_core } from "./scoring.ai";
+
+program ViralForgeTitan {
+  const app_id = "ViralForgeTitan.v1";
+
+  core Signal {
+    feature_1 = "real_time_algorithm_monitor(public_trend_apis,social_listening,fyp_cohort_tests)";
+    feature_2 = "quantum_editing_optimizer(superposed_cut_overlay_states via viral_forge_edit.qube)";
+    feature_3 = "hook_retention_engine(2to3s_hook,70pct_payoff_pacing,rewatch_loops)";
+    feature_4 = "series_episodic_builder(part_1_2_3_linking,open_loop_closers)";
+    feature_5 = "seo_captions_hashtags(keyword_trend_spoken_alignment,search_cue_boost)";
+    feature_6 = "dynamic_audio(rising_sounds + original_voiceover + beat_switch)";
+    feature_7 = "engagement_sprint_scheduler(best_times,auto_reply,comment_pinning)";
+    feature_8 = "shadowban_avoidance_compliance(banned_term_filter,lexical_randomizer,disclosure_toggles)";
+  }
+
+  core Offer {
+    lane_A = "UGC_service_pack: hooks+scripts+edl+captions+blender_packshot";
+    lane_B = "tiktok_shop_affiliate_posts: product_links + commission_protection";
+  }
+
+  core Cashflow {
+    equation_rps = "RPS=0.55*Speed+0.25*Trust+0.20*Scalability-0.30*ComplianceRisk";
+    equation_crs = "CRS=0.35*ProofVisual+0.25*ReturnRisk+0.20*SellerQuality+0.20*CommissionPotential";
+  }
+
+  core Execution {
+    day_1 = "niche lock + 9 raw clips + 1 demo offer";
+    day_2 = "publish 3 optimized videos + outreach 20 sellers";
+    day_3 = "deliver sample edits + close first micro-deal";
+    day_4 = "scale part-series + launch retainer offer";
+    day_5 = "integrate n8n inbox/outbox + github artifact log";
+    day_6 = "run blender packshot batch + affiliate-ready creatives";
+    day_7 = "optimize by RPS/CRS + renew cashflow loops";
+  }
+
+  fn compile_pipeline() {
+    let t = [];
+    push(t, tasks_vault.emit_task("ingest_raw_clip", "LaneA", "normalize,transcribe,scene_split"));
+    push(t, tasks_vault.emit_task("optimize_edits", "LaneA", "invoke:viral_forge_edit.qube"));
+    push(t, tasks_vault.emit_task("caption_seo", "LaneB", "spoken_alignment+trend_hashtags"));
+    push(t, tasks_vault.emit_task("schedule_publish", "LaneA+LaneB", "engagement_sprint_windows"));
+    tasks_vault.write_lines("viral_forge.pipeline.jsonl", t);
+  }
+
+  fn run() {
+    compile_pipeline();
+    let rps = scoring_core.rps(9.1, 7.0, 7.6, 1.3);
+    let crs = scoring_core.crs(8.5, 7.8, 7.1, 8.3);
+    write_file("viral_forge.score.txt", "app=" + app_id + "\nrps=" + str(rps) + "\ncrs=" + str(crs) + "\n");
+  }
+}
+
+ViralForgeTitan.run();
